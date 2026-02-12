@@ -4,6 +4,8 @@ runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm21
+only-arches:
+  - x86_64
 build-options:
   append-path: /usr/lib/sdk/llvm21/bin
   prepend-ld-library-path: /usr/lib/sdk/llvm21/lib
