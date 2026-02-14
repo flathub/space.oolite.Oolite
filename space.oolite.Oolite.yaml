@@ -22,19 +22,7 @@ cleanup:
   - "*.a"
   - "*.la"
 modules:
-  - shared-modules/glu/glu-9.json
-  - name: sdl12-compat
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-    sources:
-      - type: git
-        url: https://github.com/libsdl-org/sdl12-compat.git
-        tag: release-1.2.74
-        commit: 8cb4550f9aff307e3df6ce628c2bb1287c6c105b
-    cleanup:
-      - /bin
-      - /share
+  - shared-modules/SDL/sdl12-compat.json
   - name: pcaudiolib
     sources:
       - type: archive
@@ -94,9 +82,9 @@ modules:
         url: https://github.com/gnustep/libs-base.git
         commit: 2b236ec2c4816e7ff482f07dc973b655a3780122
   - name: oolite
-    only-arches:
-      - x86_64
     buildsystem: simple
+    secret-env:
+      - VERSION_OVERRIDE
     build-commands:
       - |
         source /app/share/GNUstep/Makefiles/GNUstep.sh
@@ -109,5 +97,5 @@ modules:
         dest-filename: Oolite-logo3.png
       - type: git
         url: https://github.com/OoliteProject/oolite.git
-        tag: "1.92.0.2"
-        commit: ebb6b0a6217149a6986f030094956fd339816cec
+        tag: "1.92.0.3"
+        commit: d2a705b05f667e9aa4d18478ff9305dac9183a9a
