@@ -91,5 +91,5 @@ modules:
       #   path: ../
       - type: git
         url: https://github.com/OoliteProject/oolite.git
-        tag: "1.92.0.5"
-        commit: c70761c685ef0e0315f0c3d2feff2b95aad60cce
+        tag: "1.92.0.6"
+        commit: 0e2a2d265ee8b66ed6f7bc633b68e2ca96c77602
